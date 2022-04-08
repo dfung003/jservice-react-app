@@ -14,7 +14,7 @@ export default function App() {
     const [answer, setAnswer] = useState([]);
     const [qBtn, setQBtn] = useState(false);
     const [showBtn, setShowBtn] = useState(false);
-    const url = "http://jservice.io/api/random"
+    const url = "https://jservice.io/api/random"
 
     const increase = (e) => {
         setScore(score + answer[0].value);
