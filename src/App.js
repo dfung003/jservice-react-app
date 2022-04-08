@@ -2,6 +2,9 @@ import "./style.css";
 import Header from "./components/Header";
 import Score from "./components/Score";
 import ScoreBtn from "./components/ScoreBtn";
+import GetBtn from "./components/GetBtn";
+import InfoDisplay from "./components/InfoDisplay";
+import Reveal from "./components/Reveal";
 import { useState, useEffect } from 'react';
 
 
@@ -79,34 +82,11 @@ export default function App() {
             <div className="answer-container">
                 <p>Let's Play</p>
 
-                <button onClick={toggleAns} className="answerBtn">Get Random Answer</button>
-                {Object.keys(answer).length ? (
-                    <div className="info-container">
-                        <h2 className="description">Category: {answer[0].category.title}</h2>
-                        <h2 className="description">Points: {answer[0].value}</h2>
-                        <h2 className="description">Answer: {answer[0].question} </h2>
-                    </div>
-                ) :
-                    (
-                        ""
-                    )
-                }
+                <GetBtn toggleAns={toggleAns} />
+                <InfoDisplay answer={answer} />
             </div>
             <div className="question-container">
-                <button onClick={toggleReveal} className="revealBtn">Click to Reveal Question</button>
-                {Object.keys(answer).length ? (
-                    showBtn ? (
-                        <h1>Question: {answer[0].answer}</h1>
-                    ) :
-                        (
-                            ""
-                        )
-
-                ) :
-                    (
-                        ""
-                    )
-                }
+                <Reveal toggleReveal={toggleReveal} answer={answer} showBtn={showBtn} />
             </div>
         </div>
     )
