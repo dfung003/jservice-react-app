@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    margin: auto;
+    padding: .5rem;
+    color: yellow;
+}
+
+body {
+    display: flex;
+    background-color: navy;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header {
+    padding: 0;
+}
+
+.score-label {
+    text-align: center;
+    margin: 0;
+    /* vertical-align: text-top; */
+}
+
+.score-container {
+    color: yellow;
+    padding-bottom: .25rem;
+    padding-top: 0;
+}
+
+button {
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.decrease,
+.increase,
+.reset {
+    border-radius: 8px;
+    padding: 1rem;
+    margin: .25rem;
+    min-width: 100px;
+    max-width: 100px;
+}
+
+.decrease {
+    background-color: lightcoral;
+}
+
+.increase {
+    background-color: palegreen;
+}
+
+.reset {
+    background-color: red;
+}
+
+.answer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-container {
+    text-align: center;
+}
+
+.answerBtn {
+    align-items: center;
+    border-radius: 8px;
+    padding: .45rem;
+    background-color: palegoldenrod;
+}
+
+
+p {
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+
+.question-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.revealBtn {
+    border: white solid 1px;
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 24px;
+    max-height: 24px;
+    border-radius: 8px;
+    background-color: darkblue;
+    color: whitesmoke
+}

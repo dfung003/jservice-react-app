@@ -1,7 +1,6 @@
-import { setSelectionRange } from '@testing-library/user-event/dist/utils';
 import { useState, useEffect } from 'react';
 
-export default function Questions(props) {
+export default function Main(props) {
     const [data, setData] = useState([]);
     const [toggle, setToggle] = useState(false);
     const [score, setScore] = useState(0);
